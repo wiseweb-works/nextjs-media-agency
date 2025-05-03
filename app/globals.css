@@ -26,3 +26,7 @@ body {
 }
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+body {
+  @apply text-gray-800 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100;
+}
