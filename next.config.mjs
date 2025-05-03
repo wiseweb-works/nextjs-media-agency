@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       new URL("https://fakeimg.pl/**"),
-      new URL("https://flowbite.com/docs/images/people/**"),
+      new URL("https://flowbite.com/docs/images/**"),
       new URL("https://images.unsplash.com/**"),
     ],
   },

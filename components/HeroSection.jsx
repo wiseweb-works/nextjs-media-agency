@@ -13,7 +13,7 @@ export default function HeroSection() {
       <section className="relative m-auto w-full max-w-[77dvw] h-full max-h-[250px] flex flex-col gap-5 items-center lg:items-start">
         <TagAndDate />
         <div className="max-w-xl">
-          <p className="text-5xl">Lorem ipsum dolor sit amet consectetur.</p>
+          <h2 className="text-5xl">Lorem ipsum dolor sit amet consectetur.</h2>
         </div>
         <div className="flex items-center gap-4">
           <Image

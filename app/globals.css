@@ -30,3 +30,9 @@ body {
 body {
   @apply text-gray-800 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100;
 }
+
+p,
+span,
+a {
+  @apply text-justify;
+}
