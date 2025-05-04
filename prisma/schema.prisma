@@ -17,23 +17,55 @@ datasource db {
 // }
 
 model User {
-  id             String  @id @default(cuid())
-  email          String  @unique
+  id             String    @id @default(cuid())
+  name           String
+  email          String    @unique
   hashedPassword String
-  isAdmin        Boolean @default(false)
+  imageUrl       String?
+  isAdmin        Boolean   @default(false)
   posts          Post[]
+  comments       Comment[]
 }
 
 model Post {
+  id         String    @id @default(cuid())
+  title      String
+  slug       String    @unique
+  content    String
+  imageUrl   String?
+  published  Boolean   @default(false)
+  author     User      @relation(fields: [authorId], references: [id])
+  authorId   String
+  category   Category  @relation(fields: [categoryId], references: [id])
+  categoryId String
+  updatedAt  DateTime  @updatedAt
+  createdAt  DateTime  @default(now()) @map("created_at")
+  comments   Comment[]
+
+  @@index([createdAt])
+  @@index([published])
+  @@index([categoryId])
+  @@index([authorId])
+  @@index([categoryId, published, createdAt])
+}
+
+model Category {
+  id    String @id @default(cuid())
+  name  String @unique
+  slug  String @unique
+  posts Post[]
+}
+
+model Comment {
   id        String   @id @default(cuid())
-  title     String
-  slug      String   @unique
   content   String
-  published Boolean  @default(false)
+  post      Post     @relation(fields: [postId], references: [id])
+  postId    String
   author    User     @relation(fields: [authorId], references: [id])
   authorId  String
-  updatedAt DateTime @updatedAt
-  createdAt DateTime @default(now()) @map("created_at")
+  createdAt DateTime @default(now())
 
-  @@index(slug)
+  @@index([postId])
+  @@index([authorId])
+  @@index([createdAt])
 }

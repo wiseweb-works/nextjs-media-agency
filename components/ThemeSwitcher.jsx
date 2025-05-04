@@ -11,8 +11,8 @@ const ThemeSwitcher = () => {
       setTheme(savedTheme);
       document.documentElement.setAttribute("data-theme", savedTheme);
     } else {
-      setTheme("light");
-      document.documentElement.setAttribute("data-theme", "light");
+      setTheme("dark");
+      document.documentElement.setAttribute("data-theme", "dark");
     }
   }, []);
 
