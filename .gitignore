@@ -417,3 +417,6 @@ FodyWeavers.xsd
 # next.js
 /.next/
 /out/
+.env*
+/lib/generated
+/prisma/dev.db

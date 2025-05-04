@@ -3,7 +3,7 @@ import TagAndDate from "./TagAndDate";
 
 export default function FeaturedSections() {
   return (
-    <div className="flex container m-auto mt-11">
+    <div className="flex container m-auto my-11">
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 flex-8">
         {Array(6)
           .fill("")
