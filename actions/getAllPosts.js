@@ -1,5 +1,7 @@
 "use server";
 
+import { prisma } from "@/lib/prisma";
+
 export default async function getAllPosts() {
   return await prisma.post.findMany({
     include: {

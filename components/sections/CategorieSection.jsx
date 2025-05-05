@@ -1,6 +1,6 @@
 import Image from "next/image";
-import SocialLinks from "./SocialLinks";
-import TagAndDate from "./TagAndDate";
+import SocialLinks from "../SocialLinks";
+import TagAndDate from "../TagAndDate";
 
 export default function CategorieSection() {
   return (

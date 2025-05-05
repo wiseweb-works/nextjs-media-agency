@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 export default function PostCommentList({ comments }) {
-  console.log(comments);
   return (
     <>
       {comments.map((comment) => (

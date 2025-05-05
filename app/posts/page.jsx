@@ -4,7 +4,6 @@ import Link from "next/link";
 
 export default async function Page() {
   const posts = await getAllPosts();
-  console.log(posts);
   return (
     <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto h-full min-h-[calc(100dvh-124px)]">
       <h1 className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">

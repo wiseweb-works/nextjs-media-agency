@@ -1,5 +1,7 @@
 "use server";
 
+import { prisma } from "@/lib/prisma";
+
 export async function getPostBySlug(slug) {
   return await prisma.post.findUnique({
     where: { slug },

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import TagAndDate from "./TagAndDate";
+import TagAndDate from "../TagAndDate";
 
 export default function FeaturedSections() {
   return (

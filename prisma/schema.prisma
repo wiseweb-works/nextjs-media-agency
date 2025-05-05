@@ -59,6 +59,7 @@ model Category {
 model Comment {
   id        String   @id @default(cuid())
   content   String
+  published Boolean  @default(false)
   post      Post     @relation(fields: [postId], references: [id])
   postId    String
   author    User     @relation(fields: [authorId], references: [id])

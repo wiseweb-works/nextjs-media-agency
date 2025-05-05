@@ -1,5 +1,5 @@
 import { getPostBySlug } from "@/actions/getPostBySlug";
-import PostCommentForm from "@/components/PostCommentForm";
+import PostCommentForm from "@/components/forms/PostCommentForm";
 import PostCommentList from "@/components/PostCommentList";
 import { prisma } from "@/lib/prisma";
 import Image from "next/image";
