@@ -72,7 +72,7 @@ export default async function Page({ params }) {
                   Discussion ({post.comments.length})
                 </h2>
               </div>
-              <PostCommentForm />
+              <PostCommentForm postId={post.id} />
               {post.comments?.length > 0 && (
                 <PostCommentList comments={post.comments} />
               )}

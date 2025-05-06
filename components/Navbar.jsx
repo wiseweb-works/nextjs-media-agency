@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { navItems } from "@/lib/data";
+import { mobileMenuItems, navItems } from "@/lib/data";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,8 +64,8 @@ const Navbar = () => {
         </ul>
 
         {isMenuOpen && (
-          <ul className="absolute left-0 z-10 top-full w-full bg-white dark:bg-gray-800 shadow-md lg:hidden flex flex-col space-y-4 p-4">
-            {navItems.map((item, index) => (
+          <ul className="absolute left-0 z-30 top-full w-full bg-white dark:bg-gray-800 shadow-md lg:hidden flex flex-col space-y-4 p-4">
+            {mobileMenuItems.map((item, index) => (
               <li key={index} onClick={() => setIsMenuOpen(false)}>
                 <Link
                   href={item.href}

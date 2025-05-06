@@ -1,7 +1,10 @@
 import Image from "next/image";
 import TagAndDate from "../TagAndDate";
+import { getAllPosts } from "@/actions/get/getAllPosts";
+import Link from "next/link";
 
-export default function FeaturedSections() {
+export default async function FeaturedSections() {
+  const posts = await getAllPosts();
   return (
     <div className="flex container m-auto my-11">
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 flex-8">
@@ -12,26 +15,32 @@ export default function FeaturedSections() {
               key={index}
               className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
             >
-              <a href="#">
+              <Link href={`/posts/${posts[index + 10].slug}`}>
                 <Image
-                  src="https://fakeimg.pl/380x250"
+                  src={
+                    posts[index + 10].imageUrl || `https://fakeimg.pl/380x250`
+                  }
                   alt="placeholder"
                   width={380}
                   height={250}
                   className="object-cover rounded-t-lg w-95 h-62.5"
                 />
-              </a>
+              </Link>
 
               <div className="p-5">
-                <TagAndDate />
-                <a href="#">
-                  <h5 className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Lorem ipsum dolor sit amet.
+                <TagAndDate
+                  tag={posts[index + 10].category.name}
+                  date={new Date(
+                    posts[index + 10].createdAt
+                  ).toLocaleDateString("de-DE")}
+                />
+                <Link href={`/posts/${posts[index + 10].slug}`}>
+                  <h5 className="my-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {posts[index + 10].title}
                   </h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                  tenetur quaerat possimus odio cum!
+                </Link>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-2">
+                  {posts[index + 10].content}
                 </p>
               </div>
             </div>
@@ -58,12 +67,17 @@ export default function FeaturedSections() {
                       </span>
                       <div>
                         <h3 className="font-semibold leading-snug">
-                          <a href="#" className="hover:underline">
-                            Lorem ipsum dolor sit amet consectetur.
-                          </a>
+                          <Link
+                            href={`/posts/${posts[index].slug}`}
+                            className="hover:underline line-clamp-3"
+                          >
+                            {posts[index].title}
+                          </Link>
                         </h3>
                         <p className="text-sm text-gray-500 dark:text-white/80">
-                          März {(index + 1) * 3}, 2025
+                          {new Date(posts[index].createdAt).toLocaleDateString(
+                            "de-DE"
+                          )}
                         </p>
                       </div>
                     </div>

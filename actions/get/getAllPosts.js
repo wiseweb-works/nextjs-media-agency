@@ -5,6 +5,9 @@ import { cache } from "react";
 
 export const getAllPosts = cache(async () => {
   return await prisma.post.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
     include: {
       author: {
         include: {
@@ -13,7 +16,7 @@ export const getAllPosts = cache(async () => {
           isAdmin: false,
         },
       },
-      category: false,
+      category: true,
       comments: false,
     },
   });
