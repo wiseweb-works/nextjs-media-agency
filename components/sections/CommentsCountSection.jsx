@@ -1,4 +1,4 @@
-import { getCommentsCount } from "@/actions/getCommentsCount";
+import { getCommentsCount } from "@/actions/get/getCommentsCount";
 
 export default async function CommentsCountSection() {
   const count = getCommentsCount();

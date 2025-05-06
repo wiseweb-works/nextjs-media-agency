@@ -1,6 +1,6 @@
 "use client";
 
-import { createUser } from "@/actions/createUser";
+import { createUser } from "@/actions/create/createUser";
 import Link from "next/link";
 import { useActionState } from "react";
 

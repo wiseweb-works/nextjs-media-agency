@@ -1,3 +1,5 @@
+"use server";
+
 import { prisma } from "@/lib/prisma";
 import { cache } from "react";
 
@@ -9,4 +11,4 @@ export const getCommentsCount = cache(async () => {
   });
 
   return count;
-}, ["comments"]);
+}, ["comments-count"]);

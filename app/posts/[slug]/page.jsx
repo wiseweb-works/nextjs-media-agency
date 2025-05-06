@@ -1,4 +1,4 @@
-import { getPostBySlug } from "@/actions/getPostBySlug";
+import { getPostBySlug } from "@/actions/get/getPostBySlug";
 import PostCommentForm from "@/components/forms/PostCommentForm";
 import PostCommentList from "@/components/PostCommentList";
 import { prisma } from "@/lib/prisma";

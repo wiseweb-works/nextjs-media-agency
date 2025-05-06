@@ -15,6 +15,9 @@ export async function getPostBySlug(slug) {
       },
       category: true,
       comments: {
+        where: {
+          published: true,
+        },
         include: {
           author: {
             include: {

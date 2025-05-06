@@ -1,8 +1,9 @@
 "use server";
 
 import { prisma } from "@/lib/prisma";
+import { cache } from "react";
 
-export default async function getAllPosts() {
+export const getAllPosts = cache(async () => {
   return await prisma.post.findMany({
     include: {
       author: {
@@ -16,4 +17,4 @@ export default async function getAllPosts() {
       comments: false,
     },
   });
-}
+}, ["posts"]);

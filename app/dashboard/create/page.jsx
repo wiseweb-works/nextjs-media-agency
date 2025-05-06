@@ -1,15 +1,13 @@
 "use server";
 
+import { getAllCategories } from "@/actions/get/getAllCategories";
 import CreatePostForm from "@/components/forms/CreatePostForm";
 import { getUser } from "@/data/user";
-import { prisma } from "@/lib/prisma";
 
 export default async function Page() {
   const author = await getUser();
 
-  const categories = await prisma.category.findMany({
-    select: { id: true, name: true },
-  });
+  const categories = await getAllCategories();
 
   return (
     <div>

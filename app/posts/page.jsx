@@ -1,4 +1,4 @@
-import getAllPosts from "@/actions/getAllPosts";
+import { getAllPosts } from "@/actions/get/getAllPosts";
 import Image from "next/image";
 import Link from "next/link";
 

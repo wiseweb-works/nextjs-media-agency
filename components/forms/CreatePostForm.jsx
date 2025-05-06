@@ -1,4 +1,4 @@
-import { createPost } from "@/actions/createPost";
+import { createPost } from "@/actions/create/createPost";
 
 export default function CreatePostForm({ author, categories }) {
   return (
