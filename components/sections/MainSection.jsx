@@ -16,6 +16,7 @@ export default async function MainSection() {
           width={500}
           height={500}
           className="object-cover rounded-xl m-auto"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5">
           <TagAndDate
@@ -35,6 +36,7 @@ export default async function MainSection() {
             width={120}
             height={120}
             className="object-cover rounded-2xl w-30 h-30"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div>
             <TagAndDate
@@ -54,6 +56,7 @@ export default async function MainSection() {
             width={120}
             height={120}
             className="object-cover rounded-2xl w-30 h-30"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div>
             <TagAndDate
@@ -73,6 +76,7 @@ export default async function MainSection() {
             width={120}
             height={120}
             className="object-cover rounded-2xl w-30 h-30"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div>
             <TagAndDate
@@ -101,6 +105,7 @@ export default async function MainSection() {
                   width={300}
                   height={120}
                   className="object-cover w-75 h-30"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </Link>
               <div className="absolute top-1/2 left-5 flex justify-between w-[260px]">

@@ -20,6 +20,7 @@ export default function Page() {
                 width={120}
                 height={120}
                 className="object-cover w-28 h-28 rounded-full border-4 border-gray-300 dark:border-gray-700 mb-4"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 Max Mustermann

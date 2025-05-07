@@ -36,6 +36,7 @@ export default async function Page({ params }) {
                     alt="Author"
                     width={64}
                     height={64}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div>
                     <p className="text-xl font-bold text-gray-900 dark:text-white">
@@ -52,12 +53,13 @@ export default async function Page({ params }) {
               </h1>
             </header>
             <figure>
-              <img
+              <Image
                 src={post.imageUrl || `https://fakeimg.pl/640x360`}
                 width={640}
                 height={460}
                 className="w-170 h-115 object-cover rounded-2xl mb-4"
                 alt=""
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <figcaption className="sr-only">
                 Figure caption for screen reader

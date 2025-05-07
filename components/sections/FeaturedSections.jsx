@@ -24,6 +24,7 @@ export default async function FeaturedSections() {
                   width={380}
                   height={250}
                   className="object-cover rounded-t-lg w-95 h-62.5"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </Link>
 

@@ -1,6 +1,7 @@
 "use server";
 
 import { getUser } from "@/data/user";
+import { prisma } from "@/lib/prisma";
 
 export const createComment = async (state, formData) => {
   const user = await getUser();

@@ -2,9 +2,18 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      new URL("https://fakeimg.pl/**"),
-      new URL("https://flowbite.com/docs/images/**"),
-      new URL("https://images.unsplash.com/**"),
+      {
+        protocol: "https",
+        hostname: "fakeimg.pl",
+      },
+      {
+        protocol: "https",
+        hostname: "flowbite.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };

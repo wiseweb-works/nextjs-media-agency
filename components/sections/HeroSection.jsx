@@ -12,6 +12,7 @@ export default async function HeroSection() {
         alt="hero image"
         fill
         className="object-cover absolute"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
       <section className="relative m-auto w-full max-w-[77dvw] h-full max-h-[250px] flex flex-col gap-5 items-center lg:items-start">
         <TagAndDate
@@ -34,6 +35,7 @@ export default async function HeroSection() {
             alt="Bordered avatar"
             width={40}
             height={40}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <p className="text-gray-500">
             By{" "}
@@ -51,6 +53,7 @@ export default async function HeroSection() {
             width={120}
             height={120}
             className="object-cover rounded-2xl w-30 h-30"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div>
             <div className="flex flex-row gap-1">
@@ -83,6 +86,7 @@ export default async function HeroSection() {
             width={120}
             height={120}
             className="object-cover rounded-2xl w-30 h-30"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div>
             <div className="flex flex-row gap-1">

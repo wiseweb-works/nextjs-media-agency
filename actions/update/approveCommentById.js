@@ -1,5 +1,6 @@
 "use server";
 
+import { prisma } from "@/lib/prisma";
 import { revalidateTag } from "next/cache";
 
 export async function approveCommentById(formData) {

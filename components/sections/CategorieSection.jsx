@@ -21,6 +21,7 @@ export default async function CategorieSection() {
             width={480}
             height={360}
             className="object-cover rounded-t-2xl w-120 h-90"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="bg-white dark:bg-gray-900/70 w-full max-w-120 rounded-b-2xl">
             <div className="m-auto flex items-center gap-6 w-4/5 px-2 py-4">
@@ -44,6 +45,7 @@ export default async function CategorieSection() {
               width={550}
               height={225}
               className="object-cover rounded-2xl w-137.5 h-56"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5">
               <TagAndDate
@@ -62,6 +64,7 @@ export default async function CategorieSection() {
               width={550}
               height={225}
               className="object-cover rounded-2xl w-137.5 h-56"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5">
               <TagAndDate

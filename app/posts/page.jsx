@@ -37,6 +37,7 @@ export default async function Page() {
                 src={post.imageUrl || `https://fakeimg.pl/630x350`}
                 alt="Blog Image"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
 
@@ -53,6 +54,7 @@ export default async function Page() {
                       alt="Avatar"
                       width={40}
                       height={40}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   <div className="ms-2.5 sm:ms-4">

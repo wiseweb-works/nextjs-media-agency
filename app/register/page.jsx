@@ -8,7 +8,7 @@ export default function Page() {
       <section className="bg-gray-50 dark:bg-gray-900 m-auto">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto">
           <Link
-            href="#"
+            href="/"
             className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
           >
             <Image
@@ -17,8 +17,9 @@ export default function Page() {
               alt="logo"
               width={32}
               height={32}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-            Flowbite
+            News Agency
           </Link>
           <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">

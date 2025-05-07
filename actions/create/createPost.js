@@ -29,5 +29,5 @@ export const createPost = async (formData) => {
       categoryId,
     },
   });
-  // redirect("/posts");
+  redirect("/posts");
 };

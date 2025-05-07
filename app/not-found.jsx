@@ -48,6 +48,7 @@ export default function NotFound() {
             alt="Mountain"
             width={720}
             height={520}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
       </div>

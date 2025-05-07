@@ -20,6 +20,7 @@ export default function PostCommentList({ comments }) {
                   width={48}
                   height={48}
                   alt="Profile Foto"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 {comment.author.name}
               </p>

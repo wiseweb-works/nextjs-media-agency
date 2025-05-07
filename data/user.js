@@ -8,7 +8,13 @@ export const getUser = cache(
 
     const data = await prisma.user.findFirst({
       where: { id: session.userId },
-      select: { id: true, name: true, email: true, imageUrl: true },
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        imageUrl: true,
+        isAdmin: true,
+      },
     });
 
     return data;

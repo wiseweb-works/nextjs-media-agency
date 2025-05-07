@@ -1,9 +1,13 @@
 import LogOutButton from "@/components/buttons/LogOutButton";
 import CommentsCountSection from "@/components/sections/CommentsCountSection";
 import UserSection from "@/components/sections/UserSection";
+import { getUser } from "@/data/user";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default async function Layout({ children }) {
+  const user = await getUser();
+  if (!user.isAdmin) redirect("/");
   return (
     <aside className="h-full min-h-[calc(100dvh-124px)] flex">
       <div className="w-64 px-3 py-4 overflow-y-auto bg-gray-100 dark:bg-gray-700/70 flex flex-col justify-between">

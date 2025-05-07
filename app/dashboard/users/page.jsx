@@ -17,8 +17,6 @@ export default async function Page() {
       },
     },
   });
-
-  console.log(users);
   return (
     <div className="grid grid-cols-2 place-items-center gap-y-4 my-6">
       {users.map(({ name, email, id, imageUrl, isAdmin, _count }) => (
@@ -32,6 +30,7 @@ export default async function Page() {
             width={200}
             height={200}
             className="object-cover w-50 h-50 rounded-t-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="flex flex-col place-items-center p-4 leading-normal w-70">
             <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

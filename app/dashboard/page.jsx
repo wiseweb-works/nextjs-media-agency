@@ -34,6 +34,7 @@ export default function Page() {
               alt="profile picture"
               width={24}
               height={24}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
               <div className="pr-3 font-medium text-gray-900 dark:text-white">
