@@ -16,7 +16,7 @@
     "@prisma/client": "6.19.0",
     "@prisma/extension-accelerate": "^3.0.1",
     "jose": "^6.1.3",
-    "next": "16.0.7",
+    "next": "16.0.9",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "zod": "4.1.13"
